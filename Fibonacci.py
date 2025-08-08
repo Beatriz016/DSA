@@ -7,6 +7,7 @@
 
  # 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
 
+# Loop 
 prev2 = 0
 prev1 = 1
 
@@ -38,5 +39,15 @@ def fibonacci(prev1, prev2):
 
 fibonacci(1,0)
 
+
+# Finding The nth Fibonacci Number Using Recursion
+
+def fibo(n):
+    if n <= 1:
+        return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+
+print(fibo(19)) # generate the 20th Fibonacci number
 
 

@@ -70,6 +70,16 @@ function fibonacci(prev1, prev2) {
 
 fibonacci(1,0);
 
+// Finding The nth Fibonacci Number Using Recursion
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+console.log("19th Fibonacci Number: ", fibonacci(19))
  
 
 
