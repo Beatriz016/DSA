@@ -27,8 +27,6 @@ for i in range(n - 1): # range(4)...
 print(f"Sorted Array: {arr}")
 
 
-
-arr = [64, 34, 25, 12, 22, 11, 90, 5]
 arr = [7,12,9,11,3]
 n = len(arr) # n = 5
 for i in range(n - 1): # range(4)...
@@ -41,5 +39,23 @@ for i in range(n - 1): # range(4)...
             # arr[j], arr[j+1] = arr[j+1], arr[j]
 
 print(f"Sorted Array: {arr}")
+
+#Improved Bubble Sort
+# In case the array is already sorted after the first run
+# If the algorithm goes through the array one time without swapping any values, the array must be finished sorted, and we can stop the algorithm
+
+my_array = [7, 3, 9, 12, 11]
+
+n = len(my_array)
+for i in range(n-1):
+    swapped = False
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+            swapped = True
+    if not swapped:
+        break
+
+print("Sorted array:", my_array)
 
         
